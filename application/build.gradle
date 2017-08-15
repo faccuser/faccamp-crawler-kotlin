@@ -1,0 +1,17 @@
+apply plugin: 'application'
+
+mainClassName = "br.com.ivanzao.faccampcrawler.Boot"
+
+applicationDefaultJvmArgs = [
+        "-server",
+        "-XX:+UseNUMA",
+        "-XX:+UseParallelGC",
+        "-Duser.timezone=America/Sao_Paulo"
+]
+
+dependencies {
+    compile project(":usecase")
+    compile project(":persistence")
+    compile project(":restapi")
+    compile project(":service")
+}

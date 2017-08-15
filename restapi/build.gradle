@@ -1,0 +1,7 @@
+dependencies {
+    compile group: 'ro.pippo', name: 'pippo-core', version: '1.4.0'
+    compile group: 'ro.pippo', name: 'pippo-jetty', version: '1.4.0'
+    compile group: 'ro.pippo', name: 'pippo-jackson', version: '1.4.0'
+
+    compile project(":usecase")
+}
