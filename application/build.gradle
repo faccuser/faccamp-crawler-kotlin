@@ -13,5 +13,5 @@ dependencies {
     compile project(":usecase")
     compile project(":persistence")
     compile project(":restapi")
-    compile project(":services")
+    compile project(":service")
 }
