@@ -1,0 +1,2 @@
+rootProject.name = 'faccamp-crawler'
+include 'usecase', 'persistence', 'service', 'restapi', 'application'
