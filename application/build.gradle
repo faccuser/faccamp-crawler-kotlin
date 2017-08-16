@@ -13,5 +13,6 @@ dependencies {
     compile project(":usecase")
     compile project(":persistence")
     compile project(":restapi")
-    compile project(":service")
+    compile project(":crawler")
+    compile project(":parser")
 }

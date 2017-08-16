@@ -6,12 +6,7 @@ import ro.pippo.core.route.RouteGroup
 @Component
 class SystemRoutes : RouteGroup("/") {
     init {
-        GET("/", { routeContext ->
-            routeContext.redirect("/health")
-        })
-
-        GET("/health", { routeContext ->
-            routeContext.json().send(mapOf("status" to "up"))
-        })
+        GET("/", { routeContext -> routeContext.redirect("/health") })
+        GET("/health", { routeContext -> routeContext.json().send(mapOf("status" to "up")) })
     }
 }

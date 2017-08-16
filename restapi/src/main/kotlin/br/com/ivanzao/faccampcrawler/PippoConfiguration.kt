@@ -9,6 +9,7 @@ import org.springframework.core.env.Environment
 import ro.pippo.core.Application
 import ro.pippo.core.Pippo
 import ro.pippo.core.PippoRuntimeException
+import ro.pippo.core.route.CSRFHandler
 import ro.pippo.core.route.RouteGroup
 import java.lang.Exception
 
