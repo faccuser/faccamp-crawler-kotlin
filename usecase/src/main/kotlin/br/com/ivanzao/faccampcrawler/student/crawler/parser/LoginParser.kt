@@ -1,10 +1,10 @@
-package br.com.ivanzao.faccampcrawler.student.crawler
+package br.com.ivanzao.faccampcrawler.student.crawler.parser
 
 import org.jsoup.nodes.Document
 import org.springframework.stereotype.Component
 
 @Component
-class StudentParser {
+class LoginParser {
 
     fun validateLogin(html: Document): Boolean {
         val elements = html.select("em")

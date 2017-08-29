@@ -1,0 +1,749 @@
+
+<iframe id="frame_reload" onLoad="setTimeout(reloadAndre, 600000)" src="ok.php" frameborder="0" height="10px" width="10px"></iframe>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+    <title>FACCAMP - FACULDADE CAMPO LIMPO PAULISTA</title>
+    <!-- compatibilidade do internet explorer 10 e 11 para o 9-->
+    <meta http-equiv="X-UA-Compatible" content="IE=9"  />
+    <meta name="title" content="PSX - SISTEMAS DE GESTÃO EDUCACIONAL" />
+    <meta name="description" lang="pt" content="PSX - SISTEMAS DE GESTÃO // SISTEMA EDUCACIONAL" />
+    <meta name="keywords" content="PSX, SISTEMAS, GESTÃO EDUCACIONAL, BOLETIM, NOTAS, FALTAS, BOLETOS, REQUERIMENTOS, PORTAL EDUCACIONAL, ERP" />
+    <meta name="URL" content="http://www.psxsistemas.com.br" />
+    <meta name="language" content="pt" />
+    <meta name="country" content="br" />
+    <meta name="author" content="psxsistemas" />
+    <meta name="copyright" content="Copyright (c) 1989-2011, PSX - SISTEMAS DE GESTÃO EDUCACIONAL" />
+    <meta name="cache-control" content="no-cache" />
+    <meta name="robots" content="ALL" />
+    <meta name="rating" content="GENERAL" />
+
+    <style type="text/css">
+        @import url(estilos.css);
+        @import url(menu.css);
+    </style>
+
+    <script type="text/javascript" src="3rd/jquery-2.1.0.js"></script>
+    <script src="3rd/jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="3rd/jquery-ui/jquery-ui.css">
+    <script type="text/javascript" src="3rd/ckeditor/ckeditor.js"></script>
+
+    <script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
+	</script>
+
+    <script type="text/javascript" async
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+
+    <script language="javascript" type="text/javascript"><!--
+    function SomenteNumero(e){
+        var tecla=(window.event)?event.keyCode:e.which;
+        if((tecla >= 20 && tecla <= 47) || (tecla >= 59)) return false;
+        else{
+            return true;
+        }
+    }
+    --></script>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+
+
+    <script>
+        function reloadAndre() {
+
+            document.getElementById('frame_reload').contentDocument.location.reload(true);
+            setTimeout(reloadAndre, 1200000);
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+<table style="width: 98%; height:98%; margin: 2px auto;" cellpadding="0" cellspacing="0" border="0">
+
+    <tr style="background-color: #036582;">
+        <td colspan="3" height="90" align="center"><img align="left" class='topo_logo' src="photo/logo_empresa.png" alt="logo" /><a style="font-family: Gabo, Open Sans, Sans-Serif, Arial, Helvetica; font-size: 80px; color: #0099FF; font-weight: bold; " >Portal </a><a style="font-family: Gabo, Open Sans, Sans-Serif, Arial, Helvetica; font-size: 80px; color: #FFFFFF; font-weight: bold;">Acadêmico</a>
+
+    </tr>
+
+    <tr valign="top">
+        <td colspan="3" ><div>
+
+        </div></td>
+    </tr>
+
+    <tr class="login" valign="middle" >
+        <td colspan="3" align="center">
+            <table width="100%" align="center" cellpadding="0"  cellspacing="0" border="0"><tr>
+                <td><form><table><tr><td><!--<input class="textbox" style="width:45px; border:0;" name=timespent>--></td></tr></table></form></td>
+                <td valign="middle" align="center">
+                    Boa Noite <em class=login-u>Tyler</em> seu último acesso foi em 27/08/2017 - 14:29:53<em class=login-u> => Login: [1984]</em>		</td>
+                <td><table><tr><td><a href="pg_portal.php?frame=frame_alu_notas.php&slc=X&frame_notas=frame_alu_notas_resultados.php&tam=0" target="_self"><img src="images/acessibilidade.png" width="25px" height="25px" alt="Acessibilidade" /></a></td><td><a href="pg_portal.php?frame=frame_alu_notas.php&slc=X&frame_notas=frame_alu_notas_resultados.php&style=A&tam=0" target="_self"><img src="images/acessibilidade+.png" width="25px" height="25px" alt="Acessibilidade" /></a></td><td><img src="images/acessibilidade_limite-.png" width="25px" height="25px" alt="Acessibilidade" /></td></tr></table></td>
+            </tr></table>
+        </td>
+
+    </tr>
+
+    <tr valign="top" class="fundo_top">
+        <td colspan="3" height="20" align="center" >&nbsp;</td>
+    </tr>
+
+    <tr class="fundo_meio" >
+        <td width="200px" valign="top">
+
+
+            <table width="250px" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td colspan="2" height="2" align="center">&nbsp;</td>
+                <tr>
+
+                <tr>
+                    <td width="5%" align="center"><div id="menucase"><div id="stylefour">&nbsp;</div></div></td>
+                    <td width="90%" align="center"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td colspan="3" align="center" class="barra_menu">
+                                <div id="menucase">
+
+                                    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_duplo_login.php  target="_self" >Login</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_avisos.php&entrada=X  target="_self" >Home</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_ficha_financeira.php  target="_self" >2ª via / Ficha Financeira</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_alu_atividade_complemetar.php  target="_self" >Atividade Complementar</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_alu_salas_turma.php&tipo=C   target="_self" >Atividades EDP</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_adm_cpa_pesquisa.php  target="_self" >Avaliação Institucional - CPA</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_cadastro.php  target="_self" >Dados Pessoais</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_alu_extrato_notas.php  target="_self" >Extrato de Notas</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_alu_faltas.php  target="_self" >Faltas</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_alu_gradealuno.php   target="_self" >Grade Horária do Aluno</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_alu_salas_turma.php&tipo=H  target="_self" >Horários - Salas Turma</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_alu_notas.php&slc=X&frame_notas=frame_alu_notas_resultados.php  target="_self" >Notas e Faltas</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_alu_plano.php&atual=X   target="_self" >Plano de Ensino / Aula</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=portal_integracao_revistadostribunais.php  target="_self" >Revista dos Tribunais</a> </li></ul></div> 	    <div id="stylefour"><ul><li> <a href=pg_portal.php?frame=frame_cadastro_senha.php  target="_self" >Senhas</a> </li></ul></div> 		<div id="stylefour"><ul><li> <a href="index.php" target="_parent" title="Sair">Sair</a> </li></ul></div>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table></td>
+                    <td width="5%" align="center"><div id="menucase"><div id="stylefour">&nbsp;</div></div></td>
+                </tr>
+            </table>
+
+        </td>
+        <td valign="top">
+
+            <table width="100%" align="center" valign="top" cellpadding="0"  cellspacing="10" border="0">
+
+                <tr valign="top" class="fundo_meio">
+                    <td colspan="3" height="400">
+
+                        <html xmlns="http://www.w3.org/1999/xhtml">
+
+                        <body>
+
+
+                        <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+
+                            <tr valign="top" class="fundo_top">
+                                <td colspan="3" height="20">
+                                    <html xmlns="http://www.w3.org/1999/xhtml">
+
+                                    <body>
+
+                                    <table width="900px" border="0" align="center" cellpadding="0" cellspacing="0">
+
+                                        <tr>
+                                            <td colspan="3" align="center" class="barra_menu">
+
+                                                <ul id="menu">
+
+                                                    <li> <a href="pg_portal.php?frame=frame_alu_notas.php&slc=X&frame_notas=frame_alu_notas_grade.php&etapa=EDP"  target="_self" >EDP</a> </li>
+                                                    <li> <a href="pg_portal.php?frame=frame_alu_notas.php&slc=X&frame_notas=frame_alu_notas_grade.php&etapa=EIXO"  target="_self" >EIXO</a> </li>
+                                                    <li> <a href="pg_portal.php?frame=frame_alu_notas.php&slc=X&frame_notas=frame_alu_notas_grade.php&etapa=ML"  target="_self" >Avaliações</a> </li>
+                                                    <li> <a href="pg_portal.php?frame=frame_alu_notas.php&slc=X&frame_notas=frame_alu_notas_resultados.php"  target="_self" >Resultados</a> </li>
+
+
+
+                                                </ul>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    </body>
+                                    </html>
+
+                                </td>
+                            </tr>
+
+                            <tr valign="top" class="fundo_meio">
+                                <td colspan="3" height="400">
+
+
+                                    <html xmlns="http://www.w3.org/1999/xhtml">
+
+                                    <body>
+
+                                    <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td  colspan="8" align="center">&nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td  colspan="8" align="center">
+                                                <div class="titulo">
+                                                    Resultado Parcial em: 28-08-2017
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td  colspan="8" align="center">&nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="8" class="LinhaPar"><p>FACCAMP</p></td>
+                                        </tr>
+
+
+
+                                        <tr valign="top" class="fundo_meio">
+                                            <td colspan="8">
+
+
+
+
+                                                <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+
+                                                    <tr><td colspan="8" class="LinhaPar">&nbsp;</td></tr>
+                                                    <tr><td colspan="8" class="LinhaPar">
+
+                                                        EDP => EDP = 12.5 %<br/>
+                                                        EIXO => EIXO = 12.5 %<br/>
+                                                        ML => Avaliações = 75 %<br/>
+                                                    </td></tr>
+                                                    <tr><td colspan="8" class="LinhaPar">&nbsp;</td></tr>
+
+                                                    <tr>
+                                                        <td class="Descricoes">RA</td>
+                                                        <td class="Descricoes">Nome do Aluno</td>
+                                                        <td class="Descricoes">&nbsp;</td>
+                                                        <td class="Descricoes">&nbsp;</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="center" class="LinhaPar">1984</td>
+                                                        <td colspan="3" class="LinhaPar">Tyler Durden</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="Descricoes">Curso</td>
+                                                        <td class="Descricoes">&nbsp;</td>
+                                                        <td class="Descricoes">S&eacute;rie</td>
+                                                        <td class="Descricoes">Turma</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="center" class="LinhaPar">52</td>
+                                                        <td class="LinhaPar">Ciência da Computação - S</td>
+                                                        <td align="center" class="LinhaPar">8</td>
+                                                        <td align="center" class="LinhaPar">14</td>
+                                                    </tr>
+
+                                                </table>
+                                            </td>
+                                        </tr>
+
+
+                                        <form  action="pg_portal.php?frame=frame_prof_notas.php&slc=X&frame_notas=frame_alu_notas_resultados.php&etapa=" method="POST">
+
+                                            <tr>
+                                                <td colspan="8">
+
+                                                    <table align="center" class="GradeNotas" cellpadding="4" cellspacing="2" width="100%">
+
+                                                        <tr>
+                                                            <td colspan="2" class="LinhaPar">&nbsp;</td>
+
+                                                            <td colspan="3" class="Descricoes">EDP&nbsp;</td>
+
+                                                            <td colspan="3" class="Descricoes">EIXO&nbsp;</td>
+
+                                                            <td colspan="3" class="Descricoes">Avaliações&nbsp;</td>
+
+                                                            <td colspan="5" class="LinhaPar">&nbsp;</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td colspan="2" class="Descricoes">DISCIPLINA</td>
+
+                                                            <td class="Descricoes">EDP&nbsp;</td>
+
+
+                                                            <td class="Descricoes">PESO</td>
+
+                                                            <td class="Descricoes">MPD&nbsp;</td>
+
+
+
+                                                            <td class="Descricoes">EIXO&nbsp;</td>
+
+
+                                                            <td class="Descricoes">PESO</td>
+
+                                                            <td class="Descricoes">MPI&nbsp;</td>
+
+
+
+                                                            <td class="Descricoes">ML&nbsp;</td>
+
+
+                                                            <td class="Descricoes">PESO</td>
+
+                                                            <td class="Descricoes">MPL&nbsp;</td>
+
+
+
+
+
+                                                            <td class="Descricoes">MÉDIA PARCIAL</td>
+                                                            <td colspan="2" class="Descricoes">NOTA EXAME</td>
+
+
+                                                            <td class="Descricoes">MÉDIA FINAL</td>
+
+                                                            <td class="Descricoes">MAX FALTAS</td>
+
+                                                            <td class="Descricoes">FALTAS</td>
+
+                                                            <td class="Descricoes">DATA, HORÁRIO e LOCAL DO EXAME</td>
+
+
+                                                        </tr>
+
+
+
+                                                        <tr>
+                                                            <td class="ColunaPar">T181&nbsp;</td>
+                                                            <td class="ColunaPar">Computação Gráfica&nbsp;</td>
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">75%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaMP" align="center" width="5px">0.0&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">NÃO&nbsp;</td>
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td class="ColunaMF" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">10&nbsp;</td>
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">&nbsp;</td>
+                                                            <td class="ColunaPar"></td>
+
+                                                        <tr>
+                                                            <td class="ColunaPar">S159&nbsp;</td>
+                                                            <td class="ColunaPar">Direito e Ética na Computação&nbsp;</td>
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">75%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaMP" align="center" width="5px">0.0&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">NÃO&nbsp;</td>
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td class="ColunaMF" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">20&nbsp;</td>
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">&nbsp;</td>
+                                                            <td class="ColunaPar"></td>
+
+                                                        <tr>
+                                                            <td class="ColunaPar">0270&nbsp;</td>
+                                                            <td class="ColunaPar">Empreendedorismo&nbsp;</td>
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">75%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaMP" align="center" width="5px">0.0&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">NÃO&nbsp;</td>
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td class="ColunaMF" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">20&nbsp;</td>
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">&nbsp;</td>
+                                                            <td class="ColunaPar"></td>
+
+                                                        <tr>
+                                                            <td class="ColunaPar">S158&nbsp;</td>
+                                                            <td class="ColunaPar">Implementação de Linguagens de Programação&nbsp;</td>
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">75%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaMP" align="center" width="5px">0.0&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">NÃO&nbsp;</td>
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td class="ColunaMF" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">20&nbsp;</td>
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">&nbsp;</td>
+                                                            <td class="ColunaPar"></td>
+
+                                                        <tr>
+                                                            <td class="ColunaPar">1068&nbsp;</td>
+                                                            <td class="ColunaPar">Sistemas para Internet II&nbsp;</td>
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">12.5%&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">75%&nbsp;</td>
+
+                                                            <td class="ColunaImpar" align="center" width="5px">&nbsp;</td>
+
+
+
+                                                            <td class="ColunaMP" align="center" width="5px">0.0&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">NÃO&nbsp;</td>
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td class="ColunaMF" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">20&nbsp;</td>
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">&nbsp;</td>
+                                                            <td class="ColunaPar"></td>
+
+                                                        <tr>
+                                                            <td class="ColunaPar">T180&nbsp;</td>
+                                                            <td class="ColunaPar">Trabalho de Diplomação II&nbsp;</td>
+
+
+
+
+
+
+
+                                                            <td colspan="9" class="ColunaPar">Não disponível&nbsp;</td>
+
+                                                            <td class="ColunaMP" align="center" width="5px">&nbsp;</td>
+
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+                                                            <td class="ColunaPar" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td class="ColunaMF" align="center" width="5px">&nbsp;</td>
+
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">&nbsp;</td>
+
+                                                            <td  class='ColunaPar'  align="center" width="5px">&nbsp;</td>
+                                                            <td class="ColunaPar"></td>
+
+
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td colspan="8">	<br/>	</td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+
+                                            <tr class="LinhaPar"><td>&nbsp;</td></tr>
+                                            <tr class="LinhaPar"><td>EDP => Média Aritmética da(s) nota(s) da(s) EDP&nbsp;</td></tr>
+
+                                            <tr class="LinhaPar"><td>MPD => Média Parcial da(s) EDP&nbsp;</td></tr>
+                                            <tr class="LinhaPar"><td>&nbsp;</td></tr>
+
+
+
+                                            <tr class="LinhaPar"><td>EIXO => Média Aritmética da(s) nota(s) da(s) EIXO&nbsp;</td></tr>
+
+                                            <tr class="LinhaPar"><td>MPI => Média Parcial da(s) EIXO&nbsp;</td></tr>
+                                            <tr class="LinhaPar"><td>&nbsp;</td></tr>
+
+
+
+                                            <tr class="LinhaPar"><td>ML => Média Aritmética da(s) nota(s) da(s) Avaliações&nbsp;</td></tr>
+
+                                            <tr class="LinhaPar"><td>MPL => Média Parcial da(s) Avaliações&nbsp;</td></tr>
+                                            <tr class="LinhaPar"><td>&nbsp;</td></tr>
+
+
+
+                                            <tr class="LinhaPar"><td>* ATENÇÃO: A aplicação do arredondamento é realizado apenas na Média Final.&nbsp;</td></tr>
+                                            <tr class="LinhaPar"><td>&nbsp;</td></tr>
+                                            <tr>
+                                                <td colspan="8" align="right">
+
+                                                    <input type="hidden" name="status_botao" size="5" maxlength="5" value="X" >&nbsp;
+
+
+                                                    <!--        <input type="Submit" class="dados_botao_boleto" value="    Enviar Notas    "> -->
+                                                </td>
+                                            </tr>
+
+                                        </form>
+
+
+
+
+                                    </table>
+
+
+                                    </body>
+
+                                    </html>
+
+
+                                </td>
+                            </tr>
+
+
+                        </table>
+
+
+
+
+
+
+                        </body>
+                        </html>
+                    </td>
+                </tr>
+
+
+            </table>
+
+        </td>
+        <td width="250px" valign="top" >
+
+        </td>
+
+
+    </tr>
+    <tr class="fundo_meio">
+        <td colspan="3" >&nbsp;</td>
+    </tr>
+    <tr class="fundo_meio">
+        <td colspan="3" >
+            <table width="100%" align="center" valign="top" cellpadding="0"  cellspacing="0" border="0">
+                <tr valign="top" class="fundo_meio" align="center">
+                    <td width="10%">&nbsp;</td>
+                    <td width="80%" class="fundo_meio" align="center" valign="top">
+
+                    </td>
+                    <td width="10%">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr class="fundo_meio">
+        <td colspan="3"  >&nbsp;</td>
+    </tr>
+
+    <tr valign="top" align="center" class="fundo_meio">
+        <td colspan="3" align="center" valign="top">
+
+            <table class="fundo_meio" style="width: 100%; height:100%; margin: 2px auto;" align="center" border="0" cellpadding="5" cellspacing="5" >
+                <tr class="fundo_lado">
+                    <td valign="middle" align="center" >
+                    </td>
+                </tr>
+                <tr >
+                    <td class="login-ard" align="justify">Informamos que a senha e login para acesso do sistema prevalece a mesma do semestre anterior.
+
+                        Para primeiro acesso: Login (Professores será o CPF e Alunos será o RA). Senha (4 digítos - dia e mês da data de nascimento - Ex. 25/10/1971 = 2510 ou 02/01/1981 = 0201). - Orientamos para que seja alterada a senha no primeiro acesso ao portal. - Em seguida realize a atualização de seus dados, como: emails e telefones. - Em caso de dúvidas, entre em contato com o suporte.
+                    </td>
+                </tr>
+                <div id="sitelock_shield_logo" class="fixed_btm" style="bottom:0;position:fixed;_position:absolute;right:0;"><a href="https://www.sitelock.com/verify.php?site=psxportalacademico.com.br" onclick="window.open('https://www.sitelock.com/verify.php?site=psxportalacademico.com.br','SiteLock','width=600,height=600,left=160,top=170');return false;" ><img alt="PCI Compliance and Malware Removal" title="SiteLock" src="//shield.sitelock.com/shield/psxportalacademico.com.br"></a></div>
+            </table>
+
+            <script type="text/javascript" src="/htmled/ltools/libs/tinymce/tinymce.min.js"></script>
+            <script type="text/javascript" src="/htmled/ltools/libs/tinymce/themes/modern/theme.min.js" ></script>
+            <!-- nÃ£o pode ser incluido no body
+            <link rel="stylesheet" type="text/css" href="/htmled/ltools/libs/tinymce/skins/lightgray/skin.min.css" />
+            -->
+            <style type="text/css">
+                .mce-btn button {
+                    height: 26px;
+                }
+            </style>
+            <script type="text/javascript">
+
+
+
+                tinymce.init({
+
+                    selector: ".editor_html_completo",
+
+                    language: "pt_BR",
+
+                    auto_focus : true,
+
+                    plugins: [
+
+                        "advlist autolink lists link image charmap print preview anchor",
+
+                        "searchreplace visualblocks code fullscreen",
+
+                        "insertdatetime media table contextmenu paste textcolor jbimages textpattern"
+
+                    ],
+
+                    toolbar: "insertfile undo redo | fontselect |  fontsizeselect | forecolor backcolor | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+
+                    relative_urls: false,
+
+                    init_instance_callback: function (inst) {
+                        $(function() { $(window).bind('load', function() {
+                            $('html, body').animate({
+                                scrollTop: $("#" + inst.id).parent().offset().top
+                            }, 1000);
+                        })});
+                    }
+
+                });
+
+
+
+            </script>
+
+
+        </td>
+    </tr>
+
+</table>
+<script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
+    $( function() {
+        $( "#datepicker2" ).datepicker();
+    } );
+</script>
+</body>
+</html>

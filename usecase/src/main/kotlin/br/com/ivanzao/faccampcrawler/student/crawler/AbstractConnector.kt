@@ -9,14 +9,14 @@ import java.io.IOException
 
 abstract class AbstractConnector {
 
-    private val LOGGER = LoggerFactory.getLogger(AbstractConnector::class.java)
-    private val USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2"
+    companion object {
+        private val LOGGER = LoggerFactory.getLogger(AbstractConnector::class.java)
+    }
 
     protected fun connect(url: String, method: Connection.Method): Response {
         try {
             LOGGER.info("Executing $method request on url -> '$url'")
             return Jsoup.connect(url)
-                    //.userAgent(USER_AGENT)
                     .method(method)
                     .execute()
         } catch (e: IOException) {
@@ -34,10 +34,8 @@ abstract class AbstractConnector {
             LOGGER.info("Executing $method request on url -> '$url'")
             val request = Jsoup.connect(url)
                     .data(params)
-                    //.userAgent(USER_AGENT)
                     .cookies(cookies)
                     .method(method)
-                    .followRedirects(true)
 
             headers.entries.forEach { request.header(it.key, it.value) }
 

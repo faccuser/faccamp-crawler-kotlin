@@ -1,11 +1,11 @@
 package br.com.ivanzao.faccampcrawler.student
 
-import br.com.ivanzao.faccampcrawler.student.crawler.StudentCrawler
+import br.com.ivanzao.faccampcrawler.student.crawler.StudentDataCrawler
 import br.com.ivanzao.faccampcrawler.student.model.StudentData
 import org.springframework.stereotype.Service
 
 @Service
-class StudentService(private val crawler: StudentCrawler) {
+class StudentService(private val crawler: StudentDataCrawler) {
 
     fun retrieveData(ra: String, password: String): StudentData {
         //TODO: login and get data cache if exists
