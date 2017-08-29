@@ -34,8 +34,8 @@ class StudentDataParser {
     }
 
     private fun extractProgramName(rawName: String): String {
-        if (rawName.contains("-")) {
-            return rawName.split("-").first().trim()
+        if (rawName.contains(" - ")) {
+            return rawName.split(" - ").first().trim()
         }
 
         return rawName.trim()
