@@ -28,7 +28,7 @@ class StudentDataParser {
     private fun extractProgram(resultsHeader: Elements): Program {
         val code = resultsHeader[6].text().trim()
         val name = extractProgramName(resultsHeader[7].text())
-        val period = Integer.valueOf(resultsHeader[8].text().trim())
+        val period = resultsHeader[8].text().trim().toInt()
 
         return Program(code = code, name = name, period = period)
     }

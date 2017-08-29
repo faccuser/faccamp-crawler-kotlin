@@ -18,11 +18,12 @@ data class Program(
 data class CourseData(
         val code: String,
         val name: String,
-        val partialAverage: Double,
-        val finalAverage: Double,
-        val absences: Int,
-        val grades: List<Grade>,
-        val edpGrades: List<Grade>
+        val partialAverage: Double?,
+        val finalAverage: Double?,
+        val absencesLimit: Int?,
+        val absences: Int?,
+        val grades: List<Grade>?,
+        val edpGrades: List<Grade>?
 )
 
 
