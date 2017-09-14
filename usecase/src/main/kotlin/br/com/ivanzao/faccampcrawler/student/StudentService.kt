@@ -8,8 +8,9 @@ import org.springframework.stereotype.Service
 class StudentService(private val crawler: StudentDataCrawler) {
 
     fun retrieveData(ra: String, password: String): StudentData {
-        //TODO: login and get data cache if exists
         val loginData = crawler.login(ra, password)
+        //TODO: login and get data cache if exists
+
         val studentData = crawler.retrieveData(loginData)
         //TODO: execute cache storing logic
 
