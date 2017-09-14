@@ -22,7 +22,7 @@ class StudentDataParser {
         val name = resultsHeader[5].text().trim()
         val program = extractProgram(resultsHeader)
 
-        return StudentData(ra = ra, name = name, program = program, courses = ArrayList())
+        return StudentData(ra = ra, name = name, program = program, coursesData = ArrayList())
     }
 
     private fun extractProgram(resultsHeader: Elements): Program {

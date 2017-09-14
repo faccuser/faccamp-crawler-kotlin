@@ -54,7 +54,15 @@ class StudentDataCrawler(private val loginParser: LoginParser,
         val studentData = studentParser.extractStudentData(coursesPage)
         val coursesData = coursesParser.extractCoursesData(coursesPage)
 
-        throw Exception()
+        val gradesData = futureGradesData.get()
+        val edpGradesData = futureEDPGradesData.get()
+
+        coursesData.forEachIndexed { index, courseData ->
+            courseData.grades.addAll(gradesData[index])
+            courseData.edpGrades.addAll(edpGradesData[index])
+        }
+
+        return studentData.copy(coursesData = coursesData)
     }
 
 }

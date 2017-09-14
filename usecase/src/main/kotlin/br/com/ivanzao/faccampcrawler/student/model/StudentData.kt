@@ -6,7 +6,7 @@ data class StudentData(
         val ra: String,
         val name: String,
         val program: Program,
-        val courses: List<CourseData>
+        val coursesData: List<CourseData>
 )
 
 data class Program(
@@ -22,8 +22,8 @@ data class CourseData(
         val finalAverage: Double?,
         val absencesLimit: Int?,
         val absences: Int?,
-        val grades: List<Grade>?,
-        val edpGrades: List<Grade>?
+        val grades: ArrayList<Grade>,
+        val edpGrades: ArrayList<Grade>
 )
 
 

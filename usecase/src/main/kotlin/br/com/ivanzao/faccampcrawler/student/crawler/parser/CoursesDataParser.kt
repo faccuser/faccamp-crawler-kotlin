@@ -15,7 +15,7 @@ class CoursesDataParser {
     }
 
     fun extractCoursesData(coursesPage: Document): List<CourseData> {
-        LOGGER.info("Extracting student courses data")
+        LOGGER.info("Extracting courses data")
         val courses = ArrayList<CourseData>()
 
         val coursesGrid = coursesPage.select(".GradeNotas tbody tr")
@@ -32,7 +32,7 @@ class CoursesDataParser {
 
         if (courseDataRow.text().contains("o dispon")) {
             return CourseData(code = code, name = name, absencesLimit = null, partialAverage = null,
-                    finalAverage = null, absences = null, grades = null, edpGrades = null)
+                    finalAverage = null, absences = null, grades = ArrayList(), edpGrades = ArrayList())
         }
 
         val partialAverage = rowColumns.select(".ColunaMP").text().removeWhitespace().toDouble()

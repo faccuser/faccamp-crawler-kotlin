@@ -9,7 +9,6 @@ import org.springframework.core.env.Environment
 import ro.pippo.core.Application
 import ro.pippo.core.Pippo
 import ro.pippo.core.PippoRuntimeException
-import ro.pippo.core.route.CSRFHandler
 import ro.pippo.core.route.RouteGroup
 import java.lang.Exception
 
@@ -25,9 +24,7 @@ class PippoConfiguration(private val env: Environment) {
             addErrorHandlers(this)
             addSettings(this)
 
-            beanFactory.getBeansOfType(RouteGroup::class.java).values.forEach {
-                addRouteGroup(it)
-            }
+            beanFactory.getBeansOfType(RouteGroup::class.java).values.forEach { addRouteGroup(it) }
         }).apply {
             addPublicResourceRoute()
             start()
@@ -69,6 +66,8 @@ class PippoConfiguration(private val env: Environment) {
             pippoSettings.overrideSetting("jetty.minThreads", env.getProperty("jetty.minThreads"))
             pippoSettings.overrideSetting("jetty.maxThreads", env.getProperty("jetty.maxThreads"))
             pippoSettings.overrideSetting("jetty.idleTimeout", env.getProperty("jetty.idleTimeout"))
+
+            contentTypeEngines.setContentTypeEngine(CustomApplicationMapper().apply { init(application) })
         }
     }
 
