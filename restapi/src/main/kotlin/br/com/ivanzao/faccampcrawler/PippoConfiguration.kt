@@ -19,7 +19,7 @@ class PippoConfiguration(private val env: Environment) {
     private val LOGGER = LoggerFactory.getLogger(PippoConfiguration::class.java)!!
 
     @Bean
-    open fun startPippo(beanFactory: ListableBeanFactory): Pippo {
+    fun startPippo(beanFactory: ListableBeanFactory): Pippo {
         return Pippo(Application().apply {
             addErrorHandlers(this)
             addSettings(this)

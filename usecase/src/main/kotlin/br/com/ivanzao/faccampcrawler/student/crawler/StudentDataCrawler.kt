@@ -7,6 +7,8 @@ import br.com.ivanzao.faccampcrawler.student.crawler.parser.GradesDataParser
 import br.com.ivanzao.faccampcrawler.student.crawler.parser.LoginParser
 import br.com.ivanzao.faccampcrawler.student.crawler.parser.StudentDataParser
 import br.com.ivanzao.faccampcrawler.student.exception.InvalidLoginException
+import br.com.ivanzao.faccampcrawler.student.model.CourseData
+import br.com.ivanzao.faccampcrawler.student.model.Grade
 import br.com.ivanzao.faccampcrawler.student.model.StudentData
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
@@ -54,15 +56,18 @@ class StudentDataCrawler(private val loginParser: LoginParser,
         val studentData = studentParser.extractStudentData(coursesPage)
         val coursesData = coursesParser.extractCoursesData(coursesPage)
 
-        val gradesData = futureGradesData.get()
-        val edpGradesData = futureEDPGradesData.get()
+        mergeCoursesGrades(coursesData, futureGradesData.get(), futureEDPGradesData.get())
 
+        return studentData.copy(courses = coursesData)
+    }
+
+    private fun mergeCoursesGrades(coursesData: List<CourseData>,
+                                   grades: List<List<Grade>>,
+                                   edpGrades: List<List<Grade>>) {
         coursesData.forEachIndexed { index, courseData ->
-            courseData.grades.addAll(gradesData[index])
-            courseData.edpGrades.addAll(edpGradesData[index])
+            courseData.grades.addAll(grades[index])
+            courseData.edpGrades.addAll(edpGrades[index])
         }
-
-        return studentData.copy(coursesData = coursesData)
     }
 
 }
