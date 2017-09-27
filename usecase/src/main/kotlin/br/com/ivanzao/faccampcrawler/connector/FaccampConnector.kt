@@ -1,6 +1,6 @@
-package br.com.ivanzao.faccampcrawler.student.crawler
+package br.com.ivanzao.faccampcrawler.connector
 
-import br.com.ivanzao.faccampcrawler.student.config.ConfigService
+import br.com.ivanzao.faccampcrawler.config.ConfigService
 import br.com.ivanzao.faccampcrawler.student.crawler.model.LoginData
 import org.jsoup.Connection.Method.GET
 import org.jsoup.Connection.Method.POST

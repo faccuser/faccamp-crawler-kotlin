@@ -1,4 +1,4 @@
-package br.com.ivanzao.faccampcrawler.student.aynsc
+package br.com.ivanzao.faccampcrawler.aynsc
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component

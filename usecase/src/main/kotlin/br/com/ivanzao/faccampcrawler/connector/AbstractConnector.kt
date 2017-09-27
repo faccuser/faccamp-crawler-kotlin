@@ -1,4 +1,4 @@
-package br.com.ivanzao.faccampcrawler.student.crawler
+package br.com.ivanzao.faccampcrawler.connector
 
 import br.com.ivanzao.faccampcrawler.student.exception.FaccampConnectionException
 import org.jsoup.Connection

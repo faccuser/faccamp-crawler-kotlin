@@ -1,6 +1,7 @@
 package br.com.ivanzao.faccampcrawler.student.crawler
 
-import br.com.ivanzao.faccampcrawler.student.aynsc.AsyncExecutor
+import br.com.ivanzao.faccampcrawler.aynsc.AsyncExecutor
+import br.com.ivanzao.faccampcrawler.connector.FaccampConnector
 import br.com.ivanzao.faccampcrawler.student.crawler.model.LoginData
 import br.com.ivanzao.faccampcrawler.student.crawler.parser.CoursesDataParser
 import br.com.ivanzao.faccampcrawler.student.crawler.parser.GradesDataParser

@@ -1,4 +1,4 @@
-package br.com.ivanzao.faccampcrawler.student.config
+package br.com.ivanzao.faccampcrawler.config
 
 import org.springframework.core.env.Environment
 import org.springframework.stereotype.Service
