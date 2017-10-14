@@ -22,8 +22,8 @@ data class CourseData(
         val finalAverage: Double?,
         val absencesLimit: Int?,
         val absences: Int?,
-        val grades: ArrayList<Grade>,
-        val edpGrades: ArrayList<Grade>
+        val grades: MutableList<Grade>,
+        val edpGrades: MutableList<Grade>
 )
 
 data class Grade(

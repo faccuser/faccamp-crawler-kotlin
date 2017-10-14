@@ -1,0 +1,5 @@
+dependencies {
+    compile 'org.springframework.data:spring-data-mongodb:2.0.0.RELEASE'
+
+    compile project(":usecase")
+}
