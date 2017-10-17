@@ -27,6 +27,6 @@ data class CourseData(
 )
 
 data class Grade(
-        val mark: Double,
+        val mark: Double?,
         val date: LocalDate
 )

@@ -137,7 +137,7 @@ class GradeDomain {
 
     fun toModel(): Grade {
         return Grade(
-                mark = this.mark!!,
+                mark = this.mark,
                 date = this.date!!
         )
     }

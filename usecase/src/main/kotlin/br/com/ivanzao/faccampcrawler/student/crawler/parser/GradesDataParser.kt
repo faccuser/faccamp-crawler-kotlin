@@ -30,7 +30,7 @@ class GradesDataParser {
                 val tableElements = table.select("tr")
                 if (tableElements.size == 2) {
                     grades.add(Grade(date = dateTextToLocalDate(tableElements[0].text().trim()),
-                            mark = tableElements[1].text().trim().toDouble()))
+                            mark = tableElements[1].text().trim().toDoubleOrNull()))
                 }
             }
 
