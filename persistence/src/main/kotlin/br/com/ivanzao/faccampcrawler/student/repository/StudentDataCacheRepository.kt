@@ -5,6 +5,6 @@ import org.springframework.data.mongodb.repository.MongoRepository
 
 interface StudentDataCacheRepository : MongoRepository<StudentDataCacheDocument, String> {
 
-    fun findTopByRaOrderByCreatedAtDesc(ra: String): StudentDataCacheDocument?
+    fun findTop1ByRaOrderByCreatedAtDesc(ra: String): List<StudentDataCacheDocument>
 
 }

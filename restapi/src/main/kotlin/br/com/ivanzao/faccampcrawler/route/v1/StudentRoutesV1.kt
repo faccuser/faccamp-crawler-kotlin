@@ -14,10 +14,11 @@ class StudentRoutesV1(private val studentService: StudentService) : RouteGroup("
     private fun handleRetrieveData(routeContext: RouteContext) {
         val ra = routeContext.getParameter("ra").toString("")
         val password = routeContext.getParameter("password").toString("")
+        val forceUpdate = routeContext.getParameter("forceUpdate").toBoolean(false)
 
         if (ra.isEmpty()) throw IllegalArgumentException("No 'ra' was inputted")
         if (password.isEmpty()) throw IllegalArgumentException("No 'password' was inputted")
 
-        routeContext.json().send(studentService.retrieveData(ra, password))
+        routeContext.json().send(studentService.retrieveData(ra, password, forceUpdate))
     }
 }

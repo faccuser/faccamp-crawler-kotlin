@@ -24,15 +24,14 @@ class StudentService(configService: ConfigService,
 
     private val cacheTimeHours = configService.getRequiredInt("cache.expiration.time")
 
-    fun retrieveData(ra: String, password: String): StudentData {
-        LOGGER.info("Retrieve cache for user with ra: $ra")
-        val cacheFuture = executor.submit { cacheService.get(ra) }
+    fun retrieveData(ra: String, password: String, forceUpdate: Boolean): StudentData {
+        val cacheFuture = if (forceUpdate) null else executor.submit { cacheService.get(ra) }
 
         LOGGER.info("Starting retrieve for user with ra: $ra")
         val loginData = crawler.login(ra, password)
         LOGGER.info("Successfully logged in user with ra: $ra")
 
-        val cache = cacheFuture.get()
+        val cache = cacheFuture?.get()
         if (cache != null && !isExpired(cache)) {
             LOGGER.info("Cache found. Returning cached data for user with ra: $ra")
             return cache.data
