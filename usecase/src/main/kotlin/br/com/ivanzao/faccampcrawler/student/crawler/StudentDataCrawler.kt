@@ -30,10 +30,7 @@ class StudentDataCrawler(private val loginParser: LoginParser,
         LOGGER.info("Executing login for student with ra: $ra")
         val loginData = connector.executeLogin(ra, password)
 
-        if (!loginParser.validateLogin(loginData.document)) {
-            LOGGER.info("Incorrect password or invalid login for ra: $ra")
-            throw InvalidLoginException("Incorrect password or invalid login for ra: $ra")
-        }
+        loginParser.validateLogin(loginData.document)
 
         return loginData
     }
