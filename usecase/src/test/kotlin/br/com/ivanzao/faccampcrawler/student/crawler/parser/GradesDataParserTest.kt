@@ -18,9 +18,9 @@ class GradesDataParserTest {
         assertEquals(6, gradesData.size)
 
         assertEquals("${Year.now().value}-08-23", gradesData[0][0].date.toString())
-        assertEquals(10.0, gradesData[0][0].mark, 0.0)
+        assertEquals(10.0, gradesData[0][0].mark)
         assertEquals("${Year.now().value}-08-30", gradesData[1][0].date.toString())
-        assertEquals(9.0, gradesData[1][0].mark, 0.0)
+        assertEquals(9.0, gradesData[1][0].mark)
     }
 
     @Test
